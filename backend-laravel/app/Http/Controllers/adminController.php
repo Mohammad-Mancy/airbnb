@@ -86,4 +86,18 @@ class adminController extends Controller
             "status" => "Success"
         ], 200);
     }
+
+    public function getHousesById($id)
+    {
+        $houses = House::where('collection_id',$id)->get();
+
+        if($houses->isEmpty()){
+            return response()->json(['data' => 'Not Found!'], 404);
+        }
+
+        return response()->json([
+            "status" => "Success",
+            "houses" => $houses
+        ], 200);
+    }
 }

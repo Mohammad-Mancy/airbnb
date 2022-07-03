@@ -16,3 +16,5 @@ Route::group(['prefix' => 'admin'], function(){
 
 Route::get('/getHouses',[adminController::class,'getHouses']);
 Route::get('/getCollections',[adminController::class,'getCollections']);
+
+Route::get('/getHouses/{id}',[adminController::class,'getHousesByID']);
