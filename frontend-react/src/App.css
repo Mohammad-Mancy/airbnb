@@ -36,7 +36,9 @@
     transform: rotate(360deg);
   }
 }
-
+.navbar{
+  position: sticky;
+}
 .top-navbar{
   display: flex;
   align-items: center;
@@ -67,4 +69,29 @@
 }
 .arrow{
   padding: 20px;
+}
+.house-image{
+  width: 375px;
+  height: 375px;
+  border-radius: 15px;
+}
+.house-container{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 70px;
+  gap: 80px;
+  justify-content: center;
+}
+.house-title-rate{
+  display: flex;
+  justify-content: space-between;
+}
+.house-title,.house-rate{
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.house-location,.house-ppn{
+  text-align-last: start;
+  font-size: 22px;
 }

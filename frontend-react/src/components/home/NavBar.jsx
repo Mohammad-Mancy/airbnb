@@ -6,7 +6,6 @@ function NavBar() {
   return (
     <div className='navbar'>
         <TopNavBar />
-     
         <BottomNavBar />
         
     </div>
