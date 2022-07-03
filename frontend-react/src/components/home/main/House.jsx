@@ -1,9 +1,9 @@
 import React from 'react'
 
-function House({image,description,location,rate,ppn }) {
+function House({itemId,image,description,location,rate,ppn }) {
   return (
     
-    <div className='house'>
+    <div className='house' key={itemId}>
         <img className="house-image" src={image} />
         <div className='house-title-rate'>
             <div className="house-title">{description}</div>
