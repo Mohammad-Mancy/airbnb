@@ -8,10 +8,10 @@ function Admin() {
     <div>
       <h1 className='adminpanel-title'>Admin Panel</h1>
       <div className='addcollection-div'>
-          <AddCollection/>
+          <Link className='addcollection-link' to='addCollection'>Add Collection</Link>
       </div>
       <div className='addhouse-div'>
-          <AddHouse />
+      <Link className='addhouse-link' to='addHouse'>Add House</Link>
       </div>
     </div>
   )

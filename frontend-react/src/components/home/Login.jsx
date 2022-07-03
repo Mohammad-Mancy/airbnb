@@ -23,7 +23,6 @@ function Login() {
         if (res.status === 200) {
           setEmail("");
           setPassword("");
-          localStorage.setItem('userId',data.userId)
           console.log(res)
           navigation('/admin')
         } else {
