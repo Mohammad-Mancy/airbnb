@@ -101,9 +101,52 @@
   width: 50px;
   opacity: 0.7;
 }
+.admin-logo:hover,.arrow:hover,.category:hover{
+  cursor: pointer;
+}
 .input-search{
   padding: 10px;
   font-size: 36px;
   width: 100%;
   border-radius: 50px;
+}
+.input-field>input{
+  font-size: 36px;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 23px;
+  width: 460px;
+}
+.add-form>h1{
+  padding: 60px;
+  font-size: 48px;
+}
+.loginBtn{
+  margin-top: 100px;
+  font-size: 36px;
+  font-weight: 600;
+  width: 375px;
+  border-radius: 20px;
+  padding: 22px;
+  border: none;
+  background-color: #33d9b2;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.back-btn{
+  font-size: 36px;
+  font-weight: 600;
+  width: 375px;
+  border-radius: 20px;
+  padding: 22px;
+  border: none;
+  background-color: #ff5252;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.back{
+  text-decoration: none;
+  color: white;
 }
