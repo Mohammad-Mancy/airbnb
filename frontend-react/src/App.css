@@ -150,3 +150,26 @@
   text-decoration: none;
   color: white;
 }
+.addcollection-div{
+  font-size: 48px;
+  padding: 100px;
+  background-color: #33d9b2;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+.addhouse-div{
+  cursor: pointer;
+  font-size: 48px;
+  padding: 100px;
+  background-color: #218c74;
+  color: white;
+  font-weight: 700;
+}
+.adminpanel-title{
+  padding: 80px;
+  margin: 0;
+  color: white;
+  font-size: 68px;
+  background-color: #ff5252;
+}

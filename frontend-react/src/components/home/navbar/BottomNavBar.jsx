@@ -28,11 +28,11 @@ function BottomNavBar() {
   const [houses, setHouses] = React.useState([]);
 
   const [filteredHouses,setFilteredHouses]=React.useState(houses);
-  const filterResult=(houseItem)=>{
-    const result=houses.filter((curData)=>{
-      return curData.collection_id===houseItem;
-    }
 
+  const filterResult=(houseItem)=>{
+  const result=houses.filter((curData)=>{
+    return curData.collection_id===houseItem;
+    }
     );
     setFilteredHouses(result);
   }
@@ -53,20 +53,6 @@ function BottomNavBar() {
 React.useEffect(() => {
   getHouses();
 },[])
-  
-  //const isItemSelected = (id) => !!selected.find((el) => el === id);
-
-  const handleClick =
-    () =>{console.log("clicked")}
-    // ({ getItemById, scrollToItem }) => {
-    //   const itemSelected = isItemSelected(id);
-
-    //   setSelected((currentSelected) =>
-    //     itemSelected
-    //       ? currentSelected.filter((el) => el !== id)
-    //       : currentSelected.concat(id)
-    //   );
-    // };
 
   return (
      <>
@@ -89,16 +75,12 @@ React.useEffect(() => {
           location={location}
           rate={rate}
           ppn={ppn}
-          
-        //   onClick={handleClick(id)}
         />
       ))}
       </div>
         </div>
     </>
   );
-
-
  
 }
 

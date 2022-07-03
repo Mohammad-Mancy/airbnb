@@ -7,7 +7,6 @@ function NavBar() {
     <div className='navbar'>
         <TopNavBar />
         <BottomNavBar />
-        
     </div>
   )
 }
