@@ -6,7 +6,7 @@ function AddHouse() {
     const [description , setDescription] = useState("");
     const [location , setLocation] = useState("");
     const [ppn , setPpn] = useState("");
-    const [collection , setCollection] = useState("");
+    const [collection_id , setCollection_id] = useState("");
     const navigation = useNavigate();
 
     async function handleSubmit(e){
@@ -16,11 +16,11 @@ function AddHouse() {
             method: "POST",
             headers:{ 'Content-Type': 'application/json' },
             body: JSON.stringify({
-              image:image,
+              image:`../../assets/images/`+image,
               description: description,
               location:location,
               ppn:ppn,
-              collection:collection,
+              collection_id:collection_id,
             }),
           });
           const data = await res.json();
@@ -30,7 +30,7 @@ function AddHouse() {
             setDescription("");
             setLocation("");
             setPpn("");
-            setCollection("")
+            setCollection_id("")
             console.log(res)
             navigation('/admin')
           } else {
@@ -115,9 +115,9 @@ function AddHouse() {
         className='input-house-ppn'
           type="text"
           placeholder={"collection id"}
-          value={collection}
+          value={collection_id}
           onChange={(e) => {
-            setCollection(e.target.value);
+            setCollection_id(e.target.value);
           }}
         />
       </div>
