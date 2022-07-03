@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+
+.top-navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 80px;
+}
+.logo-img{
+  width: 180px;
+}
+.bottom-nav{
+  display: flex;
+  gap: 50px;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.bottom-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.category >img{
+  width: 48px;
+}
+.category{
+  margin: 5px;
+}
+.cat-title{
+  font-weight: bold;
+}
