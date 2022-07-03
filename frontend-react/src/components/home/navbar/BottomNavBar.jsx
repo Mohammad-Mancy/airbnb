@@ -1,31 +1,6 @@
 import React from 'react'
 import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu';
-
-
-    
-
-  
-
-
-// [{
-//   "id": 1,
-//   "icon": "https://a0.muscache.com/pictures/8e507f16-4943-4be9-b707-59bd38d56309.jpg",
-//   "collection_name": "pool",
-//   "created_at": "2022-07-02T12:16:32.000000Z",
-//   "updated_at": "2022-07-02T12:16:32.000000Z"
-// },{
-//   "id": 2,
-//   "icon": "https://a0.muscache.com/pictures/8e507f16-4943-4be9-b707-59bd38d56309.jpg",
-//   "collection_name": "pool",
-//   "created_at": "2022-07-02T12:16:32.000000Z",
-//   "updated_at": "2022-07-02T12:16:32.000000Z"
-// },{
-//   "id": 3,
-//   "icon": "https://a0.muscache.com/pictures/8e507f16-4943-4be9-b707-59bd38d56309.jpg",
-//   "collection_name": "pool",
-//   "created_at": "2022-07-02T12:16:32.000000Z",
-//   "updated_at": "2022-07-02T12:16:32.000000Z"
-// }];
+import { AiOutlineLeft,AiOutlineRight } from "react-icons/ai";
 
 function BottomNavBar() {
   
@@ -89,8 +64,8 @@ function LeftArrow() {
     React.useContext(VisibilityContext);
 
   return (
-    <span disabled={isFirstItemVisible} onClick={() => scrollPrev()}>
-      Left
+    <span  className="arrow" disabled={isFirstItemVisible} onClick={() => scrollPrev()}>
+      <AiOutlineLeft/>
     </span>
   );
 }
@@ -99,8 +74,8 @@ function RightArrow() {
   const { isLastItemVisible, scrollNext } = React.useContext(VisibilityContext);
 
   return (
-    <span disabled={isLastItemVisible} onClick={() => scrollNext()}>
-      Right
+    <span className="arrow" disabled={isLastItemVisible} onClick={() => scrollNext()}>
+      <AiOutlineRight/>
     </span>
   );
 }
@@ -120,36 +95,3 @@ function Card({ onClick, selected, title, itemId,logo }) {
 export default BottomNavBar;
 
 
-
-
-// function BottomNavBar() {
-//   return (
-//     <div className='bottom-nav'>
-      // <div className='category'>
-      //   <img src="https://a0.muscache.com/pictures/8e507f16-4943-4be9-b707-59bd38d56309.jpg"/>
-      //   <div className='cat-title'>island</div>
-      // </div>
-
-      // <div className='category'>
-      //   <img src="https://a0.muscache.com/pictures/8e507f16-4943-4be9-b707-59bd38d56309.jpg"/>
-      //   <div className='cat-title'>island</div>
-      // </div>
-      // <div className='category'>
-      //   <img src="https://a0.muscache.com/pictures/8e507f16-4943-4be9-b707-59bd38d56309.jpg"/>
-      //   <div className='cat-title'>island</div>
-      // </div>
-      // <div className='category'>
-      //   <img src="https://a0.muscache.com/pictures/8e507f16-4943-4be9-b707-59bd38d56309.jpg"/>
-      //   <div className='cat-title'>island</div>
-      // </div>
-      // <div className='category'>
-      //   <img src="https://a0.muscache.com/pictures/8e507f16-4943-4be9-b707-59bd38d56309.jpg"/>
-      //   <div className='cat-title'>island</div>
-      // </div>
-//     </div>
-
-    
-//   )
-// }
-
-// export default BottomNavBar
