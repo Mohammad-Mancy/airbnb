@@ -43,7 +43,6 @@ function BottomNavBar() {
   return (
      
     <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow} scrollContainerClassName="bottom-nav">
-      {/* <div className='bottom-nav'> */}
       {items.map(({ id,icon,collection_name }) => (
         <Card
           itemId={id} // NOTE: itemId is required for track items
@@ -54,7 +53,6 @@ function BottomNavBar() {
           selected={isItemSelected(id)}
         />
       ))}
-      {/* </div> */}
     </ScrollMenu>
   );
 }

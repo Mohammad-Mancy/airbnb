@@ -1,18 +1,17 @@
 import React from 'react'
 import House from './main/House'
 
-export default function Main() {
+export default function Main({id}) {
 
     const [houses, setHouses] = React.useState([]);
 
     function getHouses(){ 
-        fetch('http://127.0.0.1:8000/api/getHouses')
+        fetch(`http://127.0.0.1:8000/api/getHouses`)
         .then((response) => {
           if (response.ok) {
             return response.json();
           }
           
-         
         }).then((data) => {setHouses(data.houses)})
         .catch((err) => {
           console.log(err.message);
