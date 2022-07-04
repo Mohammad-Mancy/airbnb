@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import {Link,useNavigate} from 'react-router-dom'
 function AddHouse() {
     
-    const [image , setImage] = useState("");
+    const [imageUrl , setImageUrl] = useState("");
     const [description , setDescription] = useState("");
     const [location , setLocation] = useState("");
     const [ppn , setPpn] = useState("");
@@ -16,7 +16,7 @@ function AddHouse() {
             method: "POST",
             headers:{ 'Content-Type': 'application/json' },
             body: JSON.stringify({
-              image:`../../assets/images/`+image,
+              image:imageUrl,
               description: description,
               location:location,
               ppn:ppn,
@@ -26,7 +26,7 @@ function AddHouse() {
           const data = await res.json();
           console.log(data)
           if (res.status === 200) {
-            setImage("");
+            setImageUrl("");
             setDescription("");
             setLocation("");
             setPpn("");
@@ -66,13 +66,13 @@ function AddHouse() {
     <h1>Admin Panel Add House</h1>
     <form className="add-house-form" onSubmit={handleSubmit}>
       <div className="input-house-field">
-        <span>Choose an image :</span>
         <input 
-          type="file"
-          placeholder={""}
-          value={image}
+          className='input-image-url'
+          type="text"
+          placeholder={"Url for image"}
+          value={imageUrl}
           onChange={(e) => {
-            setImage(e.target.value);
+            setImageUrl(e.target.value);
           }}
         />
       </div>
