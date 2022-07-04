@@ -1,12 +1,11 @@
 import React from 'react'
 
-import NavBar from './home/NavBar'
+import Main from './home/Main'
 
 function Home() {
   return (
     <div>
-      <NavBar />
-    
+      <Main />
     </div>
   )
 }
