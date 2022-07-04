@@ -6,15 +6,19 @@ function AddCollection() {
     const [icon , setIcon] = useState("");
     const [collection_name , setCollection_name] = useState("");
     const navigation = useNavigate();
-
+    
+    const [selectedImage, setSelectedImage] = useState(null);
+    
+   
     async function handleSubmit(e){
+      console.log(selectedImage.files)
         e.preventDefault();
         try {
-          let res = await fetch("http://127.0.0.1:8000/api/admin/login", {
+          let res = await fetch("http://127.0.0.1:8000/api/admin/addCollection", {
             method: "POST",
             headers:{ 'Content-Type': 'application/json' },
             body: JSON.stringify({
-              icon: icon,
+              icon:`file:///C:/Users/moham/OneDrive/Desktop/airbnb/frontend-react/src/assets/${selectedImage}`,//local path
               collection_name: collection_name,
             }),
           });
@@ -43,9 +47,9 @@ function AddCollection() {
               type="file"
               placeholder={"Icon URL"}
               value={icon}
-              onChange={(e) => {
-                setIcon(e.target.value);
-              }}
+              onChange={(event) => {
+                console.log(event.target.files[0].name);
+                setSelectedImage(event.target.files[0].name);}}
             />
           </div>
 
